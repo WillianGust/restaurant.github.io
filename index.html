@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurant chez Tchoupie</title>
+  <script src="public\utilitaires\js\jquery-3.6.0.min.js"></script>
+  <script src="public\utilitaires\bootstrap-5.0.0-beta3\bootstrap-5.0.0-beta3\js\bootstrap.min.js"></script>
+  <script src="public\js\monJS.js"></script>
+  <link rel="stylesheet" href="public\utilitaires\bootstrap-5.0.0-beta3\bootstrap-5.0.0-beta3\css\bootstrap.min.css"/>
+  <link rel="stylesheet" href="public\css\monCSS.css">
+</head>
+
+<body onLoad="chargerChoixMenu();">
+  <header>
+    <nav><strong>Menu</strong></nav> 
+    <div class="travail"><strong>Travail pratique par Willian Silva<br>nº 2195440</strong>
+    </div>
+    <h1><strong>Restaurant chez Tchoupie</strong></h1>
+  </header>
+  <main>
+    <div class="titreChoix">
+      <h2>Faites votre choix</h2>
+    </div>
+
+    <div class="contenu">
+      <div class="entrees">
+        <span>
+          <strong>Entrées :</strong>
+          <select id="entrees" onChange="choixEntree();sousTotal('$');"></select>
+        </span>
+        <div class="imgMenu">
+          <p id="prixEntree" style="margin-top: 85px;">$0.00</p>
+          <img id="imageEntree" src="../RestaurantOrganisation/public/images/default.jpg" height=200 width=150 />
+        </div>
+      </div>
+      
+      <div class='repas'>
+        <span>
+          <strong>Repas :</strong> <select id="repas" onChange="choixRepas();sousTotal('$');"></select>
+        </span>        
+        <div class="imgMenu">
+            <p id="prixRepas" style="margin-top: 85px;">$0.00</p>
+          <img id="imageRepas" src="../RestaurantOrganisation/public/images/default.jpg" height=200 width=150 />
+        </div>
+      </div>
+    </div>
+
+    <div class="parag">
+      <p>Sous-total:<span id='sousTotal'></span></p>
+      <p>Taxes:<span id='taxes'></span></p>
+      <p>Total:<span id='total'></span></p>
+    </div>
+    
+  </main>
+    <footer><strong>Bon Appétit!</footer>
+</body>
+</html>
